@@ -108,7 +108,25 @@ Execute all code cells until cell 25.
 
 ![Confusion Matrix](readme_images/confusion-matrix.png)
 
+Optional: Execute all code cells until cell 27.
+
 ## Deploying your model to Watson Machine Learning
+
+In the last section of the notebook, we save and deploy the model to the Watson Machine Learning service. To access the service, we need to cut and paste the Machine learning credentials. You can find them if you click on your Machine Learning service on your IBM Cloud Dashboard. Then select credentials and copy existing ones or create new ones.
+
+![Machine Learning Credentials](readme_images/ml-credentials.png)
+
+Paste the Machine learning credentials into this notebook cell, behind the variable `wml_credentials` and execute the code cell:
+
+![Paste Machine Learning Credentials](readme_images/paste-ml-credentials.png)
+
+After the model is saved and deployed to Watson Machine Learning, we can access it in a number of ways.
+
+In the Jupypter Notebook, we can pass data to the model scoring endpoint to test it.
+
+Therefore execute all remaining code cells.
+
+![Score Model](readme_images/score-model.png)
 
 ## If you have any questions just contact me
 
