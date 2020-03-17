@@ -128,6 +128,26 @@ Therefore execute all remaining code cells.
 
 ![Score Model](readme_images/score-model.png)
 
+Select File > Save to save the notebook.
+
+If we go back to the Watson Studio console, we can see in the Assets tab that the new model is listed in the Models section.
+
+![Gradient Boosting Model](readme_images/gradient-boosting-model.png)
+
+If we click on the Deployments tab, we can see that the model has been successfully deployed.
+
+![Model Deployment](readme_images/model-deployment.png)
+
+Click on the deployment to get more details. If you click the Implementation tab, you will see the scoring endpoint. In the Code Snippets section, you can see examples of how to access the scoring endpoint programmatically.
+
+On the Test tab, we can pass in a scoring payload JSON object to score the model (similar to what we did in the notebook). After supplying the data, press Predict to score the model. Use the following JSON Code: 
+
+```
+{"fields": ["state", "account length", "area code", "international plan", "voice mail plan", "number vmail messages", "total day minutes", "total day calls", "total day charge", "total eve minutes", "total eve calls", "total eve charge", "total night minutes", "total night calls", "total night charge", "total intl minutes", "total intl calls", "total intl charge", "customer service calls"], "values":[[2,162,415,0,0,0,70.7,108,12.02,157.5,87,13.39,154.8,82,6.97,9.1,3,2.46,4]]}
+```
+
+![Model Prediction](readme_images/model-prediction.png)
+
 ## If you have any questions just contact me
 
 Felix Augenstein<br>
