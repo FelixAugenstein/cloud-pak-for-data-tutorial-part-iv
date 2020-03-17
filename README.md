@@ -72,7 +72,7 @@ Each code cell is selectable and is preceded by a tag in the left margin. The ta
 
 There are several ways to run the code cells in your notebook:
 
-- One cell at a time. Select the cell, and then press Play in the toolbar.
+- One cell at a time. Select the cell, and then press Play in the toolbar, or use the shortcut on Mac `Shift + Enter`.
 - Batch mode, in sequential order. From the Cell menu, there are several options available. For example, you can Run All cells in your notebook, or you can Run All Below, which starts running from the first cell under the currently selected cell, and then continues running all of the cells that follow.
 - At a scheduled time. Press the Schedule button that is located in the upper-right section of your notebook page. Here, you can schedule your notebook to be run once at some future time or repeatedly at your specified interval.
 
@@ -80,7 +80,7 @@ There are several ways to run the code cells in your notebook:
 
 During the data understanding phase, the initial set of data is collected. The phase then proceeds with activities that enable you to become familiar with the data, identify data quality problems, and discover first insights into the data. In the Jupyter Notebook, these activities are done using pandas and the embodied `matplotlib` functions of pandas. The `describe` function of pandas is used to generate descriptive statistics for the features, and the `plot` function is used to generate diagrams showing the distribution of the data.
 
-Execute all cells until cell 8.
+Execute all code cells until cell 8.
 
 ![Pandas Functions](readme_images/pandas-functions.png)
 
@@ -88,11 +88,25 @@ Execute all cells until cell 8.
 
 The data preparation phase covers all activities that are needed to construct the final data set that will be fed into the machine learning service. Data preparation tasks are likely to be performed multiple times and not in any prescribed order. Tasks include table, record, and attribute selection as well as transformation and cleansing of data for the modeling tools. In the Jupyter Notebook, this involves turning categorical features into numerical ones, normalizing the features, and removing columns that are not relevant for prediction (such as the phone number of the client). The following image shows a subset of the operations.
 
-Execute all cells until cell 13.
+Execute all code cells until cell 13.
 
 ![Data Preparation](readme_images/data-preparation.png)
 
 ## Modeling and evaluation
+
+In the modeling phase, various modeling techniques are selected and applied and their parameters are calibrated to achieve an optimal prediction. Typically, there are several techniques that can be applied, and some techniques have specific requirements on the form of the data. Therefore, going back to the data preparation phase is often necessary. However, in the model evaluation phase, the goal is to build a model that has high quality from a data analysis perspective. Before proceeding to final deployment of the model, it’s important to thoroughly evaluate it and review the steps that are executed to create it to be certain that the model properly achieves the business objectives.
+
+In the Jupyter Notebook, this involved splitting the data set into training and testing data sets (using stratified cross-validation) and then training several models using distinct classification algorithms such as `GradientBoostingClassifier`, support vector machines, random forest, and K-Nearest Neighbors.
+
+Execute all code cells until cell 21.
+
+![Build & Train Models](readme_images/build-train-models.png)
+
+Following this step, we continue with printing the confusion matrix for each algorithm to get a more in-depth view of the accuracy and precision offered by the models.
+
+Execute all code cells until cell 25.
+
+![Confusion Matrix](readme_images/confusion-matrix.png)
 
 ## Deploying your model to Watson Machine Learning
 
