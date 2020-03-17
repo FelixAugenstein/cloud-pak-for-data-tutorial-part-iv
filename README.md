@@ -46,6 +46,37 @@ From the notebook page, make the following changes:
 
 1. Scroll down to the third cell, and select the empty line in the middle of the cell. If not already open, click the 1001 data icon at the upper part of the page to open the Files subpanel.
 
+![Pandas Dataframe](readme_images/pandas-dataframe.png)
+
+2. In the right part of the page, select the Customer Churn .csv data set. Click insert to code, and select Insert pandas DataFrame. This adds code to the data cell for reading the data set into a pandas DataFrame.
+
+Afterwards your Jupyter Notebook should look like this:
+
+![After Import](readme_images/after-import.png)
+
+3. Make sure you assign the dataframe to the variable "df". Therefore change the variable `df_data_X` to, for instance, `df_data_1` depending on your generated variable. When you execute cell 4 in the notebook, the data frame appears as the following:
+
+![Dataframe Head](readme_images/dataframe-head.png)
+
+4. Select File > Save to save the notebook.
+
+<h3>Background on running Jupyter Notebooks</h3>
+
+When a notebook is run, each code cell in the notebook is executed, in order, from top to bottom.
+
+Each code cell is selectable and is preceded by a tag in the left margin. The tag format is In [x]:. Depending on the state of the notebook, the x can be:
+
+- A blank, which indicates that the cell has never been run
+- A number, which represents the relative order that this code step was run
+- An *, which indicates that the cell is running
+
+There are several ways to run the code cells in your notebook:
+
+- One cell at a time. Select the cell, and then press Play in the toolbar.
+- Batch mode, in sequential order. From the Cell menu, there are several options available. For example, you can Run All cells in your notebook, or you can Run All Below, which starts running from the first cell under the currently selected cell, and then continues running all of the cells that follow.
+- At a scheduled time. Press the Schedule button that is located in the upper-right section of your notebook page. Here, you can schedule your notebook to be run once at some future time or repeatedly at your specified interval.
+
+
 ## Data understanding and visualization
 
 ## Data preparation
