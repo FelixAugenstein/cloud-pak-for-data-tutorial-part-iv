@@ -38,6 +38,10 @@ Create a Jupyter Notebook for predicting customer churn and change it to use the
 
 ## Run the notebook
 
+The notebook page should now be displayed. If the notebook is not currently open, you can start it by clicking the Edit icon displayed next to the notebook in the Asset page for the project. The notebook should look like this:
+
+![Jupyter Notebook](readme_images/jupyter-notebook.png)
+
 ## Data understanding and visualization
 
 ## Data preparation
