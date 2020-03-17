@@ -20,6 +20,15 @@ The 4 parts of this tutorial are based on the [Learning path: Getting started wi
 
 ## Create the first Jupyter Notebook
 
+Create a Jupyter Notebook for predicting customer churn and change it to use the data set that you have uploaded to the project.
+
+1. In the Asset tab, click Add to Project.
+
+![Create Notebook](readme_images/create-notebook.png)
+
+2. Select the Notebook asset type.
+3. On the New Notebook page, configure the notebook as follows:
+
 ## Run the notebook
 
 ## Data understanding and visualization
