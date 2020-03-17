@@ -29,6 +29,13 @@ Create a Jupyter Notebook for predicting customer churn and change it to use the
 2. Select the Notebook asset type.
 3. On the New Notebook page, configure the notebook as follows:
 
+- Select From file tab and upload the customer-churn-kaggle.ipynb file from this repository.
+- Enter the name for the notebook (for example, ‘customer-churn-kaggle’).
+- Select the Python 3.6 runtime system.
+- Click Create Notebook. This initiates the loading and running of the notebook within IBM Watson Studio.
+
+![Upload Notebook](readme_images/upload-notebook.png)
+
 ## Run the notebook
 
 ## Data understanding and visualization
