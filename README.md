@@ -18,6 +18,18 @@ This tutorial consists of 4 parts, you can start with part I or any other part, 
 
 The 4 parts of this tutorial are based on the [Learning path: Getting started with Watson Studio](https://developer.ibm.com/series/learning-path-watson-studio/).
 
+## Create the first Jupyter Notebook
+
+## Run the notebook
+
+## Data understanding and visualization
+
+## Data preparation
+
+## Modeling and evaluation
+
+## Deploying your model to Watson Machine Learning
+
 ## If you have any questions just contact me
 
 Felix Augenstein<br>
