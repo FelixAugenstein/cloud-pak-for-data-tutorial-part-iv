@@ -42,6 +42,10 @@ The notebook page should now be displayed. If the notebook is not currently open
 
 ![Jupyter Notebook](readme_images/jupyter-notebook.png)
 
+From the notebook page, make the following changes:
+
+1. Scroll down to the third cell, and select the empty line in the middle of the cell. If not already open, click the 1001 data icon at the upper part of the page to open the Files subpanel.
+
 ## Data understanding and visualization
 
 ## Data preparation
