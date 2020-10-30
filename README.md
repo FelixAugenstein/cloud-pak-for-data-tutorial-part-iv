@@ -112,6 +112,9 @@ Optional: Execute all code cells until cell 27.
 
 ## Deploying your model to Watson Machine Learning
 
+Note: In the new Watson Machine Learning version you do not have credentials anymore. You have to create an API-Key. If you don't have one already create a new API-Key [here](https://cloud.ibm.com/iam/apikeys). If your WML service is deployed in US-South use the URL https://us-south.ml.cloud.ibm.com. 
+You will also need a deployment space. If you haven't created a depeloyment space you can do that [here](https://dataplatform.cloud.ibm.com/ml-runtime/spaces?context=cpdaas). You can access your deployment spaces from your [Cloud Pak for Data Homepage](https://dataplatform.cloud.ibm.com).
+
 In the last section of the notebook, we save and deploy the model to the Watson Machine Learning service. To access the service, we need to cut and paste the Machine learning credentials. You can find them if you click on your Machine Learning service on your IBM Cloud Dashboard. Then select credentials and copy existing ones or create new ones.
 
 ![Machine Learning Credentials](readme_images/ml-credentials.png)
