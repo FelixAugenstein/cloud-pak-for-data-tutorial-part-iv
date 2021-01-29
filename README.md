@@ -1,4 +1,4 @@
-<h1 align="center" style="border-bottom: none;">:bar_chart: IBM Digital Tech Tutorial: Watson Studio Part IV</h1>
+<h1 align="center" style="border-bottom: none;">:bar_chart: IBM Cloud Pak for Data Tutorial: Part IV</h1>
 <h3 align="center">In this hands-on tutorial you will set up and run Jupyter Notebooks from within IBM Watson Studio to develop a machine learning model.</h3>
 
 ## Prerequisites
@@ -8,7 +8,7 @@
 3. After you submit your registration, you will receive an e-mail from the IBM Cloud team with details about your account. In this e-mail, you will need to click the link provided to confirm your registration.
 4. Now you should be able to login to your new IBM Cloud account ;-)
 
-## Digital Tech Tutorial Watson Studio Part I to V
+## Cloud Pak for Data Tutorials Part I to V
 
 This tutorial consists of 5 parts, you can start with part I or any other part, however, the necessary environment is set up in part I.<br>
 [Part I - data visualization, preparation, and transformation](https://github.com/FelixAugenstein/digital-tech-tutorial-watson-studio)<br>
@@ -29,9 +29,9 @@ Create a Jupyter Notebook for predicting customer churn and change it to use the
 2. Select the Notebook asset type.
 3. On the New Notebook page, configure the notebook as follows:
 
-- Select From file tab and upload the customer-churn-kaggle.ipynb file from this repository.
-- Enter the name for the notebook (for example, ‘customer-churn-kaggle’).
-- Select the Python 3.6 runtime system or Python 3.7 if you want to work with the notebook 'customer-churn-notebook-py3.7'
+- Select From file tab and upload the customer-churn-notebook-py3.7.ipynb file from this repository.
+- Enter the name for the notebook (for example, ‘customer-churn-notebook-py3.7’).
+- Select the Python 3.7 to work with the notebook 'customer-churn-notebook-py3.7'
 - Click Create Notebook. This initiates the loading and running of the notebook within IBM Watson Studio.
 
 ![Upload Notebook](readme_images/upload-notebook.png)
@@ -115,13 +115,31 @@ Optional: Execute all code cells until cell 27.
 Note: In the new Watson Machine Learning version you do not have credentials anymore. You have to create an API-Key. If you don't have one already create a new API-Key [here](https://cloud.ibm.com/iam/apikeys). If your WML service is deployed in US-South use the URL https://us-south.ml.cloud.ibm.com. 
 You will also need a deployment space. If you haven't created a depeloyment space you can do that [here](https://dataplatform.cloud.ibm.com/ml-runtime/spaces?context=cpdaas). You can access your deployment spaces from your [Cloud Pak for Data Homepage](https://dataplatform.cloud.ibm.com).
 
-In the last section of the notebook, we save and deploy the model to the Watson Machine Learning service. To access the service, we need to cut and paste the Machine learning credentials. You can find them if you click on your Machine Learning service on your IBM Cloud Dashboard. Then select credentials and copy existing ones or create new ones.
+In the last section of the notebook, we save and deploy the model to the Watson Machine Learning service. To access the service, we first need to create an API key. You need to be on the IBM Cloud Page, select the Manage box and navigate to the Access page. 
 
-![Machine Learning Credentials](readme_images/ml-credentials.png)
+![Create API 1](readme_images/1_create_api.png)
 
-Paste the Machine learning credentials into this notebook cell, behind the variable `wml_credentials` and execute the code cell:
+Now click on API keys on the left hand-side and there you can create a new API key. Remember to write down your key or copy it to avoid losing it.
 
-![Paste Machine Learning Credentials](readme_images/paste-ml-credentials.png)
+![Create API 2](readme_images/2_create_api.png)
+
+Paste the API key into this notebook cell, behind the variable `apikey` and execute the code cell:
+
+![Insert API 3](readme_images/3_insert_api.png)
+
+Now we need to access our Deployment Space, which we created in the second tutorial:
+
+[Part II - build and evaluate machine learning models by using the AutoAI](https://github.com/FelixAugenstein/digital-tech-tutorial-watson-studio-part-ii/)<br>
+
+ Navigate to your Deployment and then go to the settings column, where you can find the Space ID. 
+
+![Space ID 4](readme_images/4_space_id.png)
+
+Copy and paste it in the Notebook.
+And run the remaining Cells.
+
+![Space ID 5](readme_images/5_space_id.png)
+
 
 After the model is saved and deployed to Watson Machine Learning, we can access it in a number of ways.
 
@@ -133,23 +151,22 @@ Therefore execute all remaining code cells.
 
 Select File > Save to save the notebook.
 
-If we go back to the Watson Studio console, we can see in the Assets tab that the new model is listed in the Models section.
+If we now go back to our Deployment Space, we can find the new model listed in the in the Deployments tab. The Model has been successfully deployed. 
 
-![Gradient Boosting Model](readme_images/gradient-boosting-model.png)
+![Model Deployed 6](readme_images/6_model_deployed.png)
 
-If we click on the Deployments tab, we can see that the model has been successfully deployed.
+If we click on the Model, we can navigate to a test environment.
 
-![Model Deployment](readme_images/model-deployment.png)
+![Model Test 7](readme_images/7_model_test.png)
 
-Click on the deployment to get more details. If you click the Implementation tab, you will see the scoring endpoint. In the Code Snippets section, you can see examples of how to access the scoring endpoint programmatically.
-
-On the Test tab, we can pass in a scoring payload JSON object to score the model (similar to what we did in the notebook). After supplying the data, press Predict to score the model. Use the following JSON Code: 
+On the Test tab, we can pass in a scoring payload JSON object to score the model (similar to what we did in the notebook). To run a test use the following JSON Code: 
 
 ```
 {"fields": ["state", "account length", "area code", "international plan", "voice mail plan", "number vmail messages", "total day minutes", "total day calls", "total day charge", "total eve minutes", "total eve calls", "total eve charge", "total night minutes", "total night calls", "total night charge", "total intl minutes", "total intl calls", "total intl charge", "customer service calls"], "values":[[2,162,415,0,0,0,70.7,108,12.02,157.5,87,13.39,154.8,82,6.97,9.1,3,2.46,4]]}
 ```
+After pasting the code in between the brackets after input_data: , press Predict to score the model.
 
-![Model Prediction](readme_images/model-prediction.png)
+![Model Test 8](readme_images/8_model_test.png)
 
 The prediction result is given in terms of the probability that the customer will churn (1/True) or not (0/False). You can try it with other values.
 
