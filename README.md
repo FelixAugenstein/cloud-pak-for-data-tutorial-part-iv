@@ -18,6 +18,19 @@ This tutorial consists of 5 parts, you can start with part I or any other part, 
 [Part V - deploy a local app to test your model](https://github.com/FelixAugenstein/cloud-pak-for-data-tutorial-part-v) 
 
 The first 4 parts of this tutorial are based on the [Learning path: Getting started with Watson Studio](https://developer.ibm.com/series/learning-path-watson-studio/).
+
+<h4>1) CRISP-DM</h4>
+The **CR**oss **I**ndustry **S**tandard **P**rocess for **D**ata **M**ining is a model to display the cycle of a data science project. It consists of six phases:
+1. Business Understanding - What does the business need?
+2. Data Understanding - What data do we have and how is it made up of?
+3. Data Preparation - How can we structure the data for the modeling?
+4. Modeling - Which modeling techniques could apply? 
+5. Evaluation - Which model is the most accurate? 
+6. Deployment - How to implement the model? 
+
+The tutorial is provided with a business understanding (predict churns) and will cover the data understanding, preparation, modeling and evaluation. 
+
+
 ## Create the first Jupyter Notebook
 
 Create a Jupyter Notebook for predicting customer churn and change it to use the data set that you have uploaded to the project.
