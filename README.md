@@ -45,7 +45,7 @@ Create a Jupyter Notebook for predicting customer churn and change it to use the
 2. Select the Notebook asset type.
 3. On the New Notebook page, configure the notebook as follows:
 
-- Select From file tab and upload the customer-churn-notebook-py3.7.ipynb file from this repository.
+- Select From file tab and upload the customer-churn-notebook-py3.7.ipynb file from this repository (or choose the py3.8 notebook instead).
 - Enter the name for the notebook (for example, ‘customer-churn-notebook-py3.7’).
 - Select the Python 3.7 to work with the notebook 'customer-churn-notebook-py3.7'
 - Click Create Notebook. This initiates the loading and running of the notebook within IBM Watson Studio.
