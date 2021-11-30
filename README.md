@@ -147,7 +147,7 @@ Now we need to access our Deployment Space, which we created in the second tutor
 
 [Part II - build and evaluate machine learning models by using the AutoAI](https://github.com/FelixAugenstein/digital-tech-tutorial-watson-studio-part-ii/)<br>
 
- Navigate to your Deployment and then go to the settings column, where you can find the Space ID. 
+ Navigate to your Deployment there you can find the Space GUID. 
 
 ![Space ID 4](readme_images/4_space_id.png)
 
