@@ -173,7 +173,7 @@ If we now go back to our Deployment Space, we can find the new model listed in t
 
 If we click on the Model, we can navigate to a test environment.
 
-![Model Test 7](readme_images/7_model_test.png)
+![Model Test 7](readme_images/input-test-data.png)
 
 On the Test tab, we can pass in a scoring payload JSON object to score the model (similar to what we did in the notebook). To run a test use the following JSON Code: 
 
@@ -183,6 +183,6 @@ On the Test tab, we can pass in a scoring payload JSON object to score the model
 ```
 After pasting the code in between the brackets after input_data: , press Predict to score the model.
 
-![Model Test 8](readme_images/8_model_test.png)
+![Model Test 8](readme_images/test-result.png)
 
 The prediction result is given in terms of the probability that the customer will churn (1/True) or not (0/False). You can try it with other values.
