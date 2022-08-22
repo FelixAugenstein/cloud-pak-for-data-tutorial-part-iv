@@ -75,7 +75,7 @@ Afterwards your Jupyter Notebook should look like this:
 ![Dataframe Head](readme_images/dataframe-head.png)
 
 4. In cell 31 change the "sofware_spec_uid" to "runtime-22.1-py3.9" and the "client.repository.ModelMetaNames.TYPE" to "scikit-learn_1.0"
-
+![Specification uid change](readme_images/spec_uid_change.png)
 5. Select File > Save to save the notebook.
 
 <h3>Background on running Jupyter Notebooks</h3>
